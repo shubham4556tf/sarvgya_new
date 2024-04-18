@@ -11,6 +11,10 @@ html, body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+.page4{
+    display: flex;
+    flex-direction: row;
+}
 
 /* Common styles for .page2 and .page1 */
 .page2, .page1 {
@@ -47,7 +51,7 @@ html, body {
 .page1::before {
     content: "";
     position: absolute;
-    height: 65%;
+    height: 100%;
     width: 100%;
     background-color: rgba(2, 2, 2, 0.63);
 }
@@ -78,7 +82,7 @@ html, body {
     border-radius: 3vw;
     height: 7vh;
     width: 15vh;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.527);
 }
 
 @media ((min-width:322px) and (max-width:376px)) {
@@ -129,7 +133,7 @@ html, body {
 }
 
 /* Additional media query for higher screen height mobile */
-@media (max-width:426px) and (max-height:670px) and (min-height:600px) {
+@media (max-width:426px) and (max-height:700px) and (min-height:600px) {
     /* Adjusted styles for .page2 and .page1 */
     * {
         margin: 0;
@@ -180,7 +184,7 @@ html, body {
     .page1::before {
         content: "";
         position: absolute;
-        height: 65%;
+        height: 100%;
         width: 100%;
         background-color: rgba(2, 2, 2, 0.63);
     }
@@ -207,11 +211,10 @@ html, body {
     }
     
     .Button {     
-        border: 3px solid #4D8175;
+        border: 1px solid #4D8175;
         border-radius: 3vw;
         height: 7vh;
         width: 15vh;
-        background-color: black;
     }
     
     @media ((min-width:322px) and (max-width:376px)) {
@@ -232,6 +235,12 @@ html, body {
     .page3 {
         height: 80vw;
         width: 100vw;
+        display: flex;
+        flex-direction: row;
+       
+
+    }
+    .page4{
         display: flex;
         flex-direction: row;
     }
@@ -260,6 +269,7 @@ html, body {
         height: 100%;
         object-fit: cover;
     }
-    
-    
+    .page6{
+        height: 60vh;
+    }
 }
