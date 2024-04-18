@@ -1,149 +1,136 @@
-/* z-idex highest:300
-infinteslider=>200
-header=>300
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
 
-*/
+html, body {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
+/* Common styles for .page2 and .page1 */
+.page2, .page1 {
+    width: 100vw;
+}
 
-
-@media (max-width:425px) and (max-height:670px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: poppins;
-    }
-    
-    html, body {
-        position: relative;
-        height: 100%;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
-    /* **********************************styleing page2 bar****************************** */
-    .page2{
+/* Styling for .page2 */
+.page2 {
     display: flex;
     flex-direction: column;
     height: 40vh;
-    width: 100vw;
-    }
-    .lower_tap{
-        gap:1vh;
-
-    }
-    .card{
-        height: 80%;
-        width:30vw;
-    
-       
-        border-radius: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-        
-    /* **********************************styleing page1 bar****************************** */
-    .page1{
-        height: 65vh;
-        width:100vw;
-        background-image: url(mobile_bg.jpg);
-        background-position: center;
-        background-size: 53vh;
-    }
-    .page1::before{
-        content: "";
-        position:absolute;
-        height:65%;
-        width:100%;
-        background-color: rgba(2, 2, 2, 0.63);
-    }
-    .page1Content{
-        padding: 20px 0 0px 10px;
-        position: absolute;
-        width:100vw;
-        height: 40vh;  
-        display: flex;
-        flex-direction: column;
-        gap:22px
-    }
-    .page1Button{
-        position:relative;
-        top:50vh;
-        height:12vh;
-        width:100%;
-        display:flex;
-        align-items: center;
-        gap:5vw;
-        padding-left: 5vw;
-    
-
-    }
-    .Button{     
-        border:3px solid #4D8175;
-        border-radius:3vw;
-        height:7vh;
-        width:15vh;
-        
-        
-    }
-    @media ((min-width:322px) and (max-width:376px)) {
-    .Button{
-        height:8vh;
-        width:18vh;
-    }
-        
-    }
-
-    @media ((min-width:378px) and (max-width:427px)) {
-        .Button{
-        height:9vh;
-        width:19vh;
-        }
-        
-    }
-    
-
-    /* **********************************styleing page3 ****************************** */
-    .page3{
-        height: 80vw;
-        width:100vw;
-       
-        display: flex;
-        flex-direction: row;
-    }
-    .swiper {
-        width: 95%;
-        height: 95%;
-        z-index: 100;
-        position: absolute;
-        top:0px;
-        border-radius: 4px;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        
-        justify-content: center;
-        align-items: center;
-    }
-
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        
-    }
-    
 }
 
+.lower_tap {
+    gap: 1vh;
+}
 
+.card {
+    height: 80%;
+    width: 30vw;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-/*  for heiger screen height mobile ****************************************/
+/* Styling for .page1 */
+.page1 {
+    height: 65vh;
+    background-image: url(mobile_bg.jpg);
+    background-position: center;
+    background-size: 53vh;
+    position: relative;
+}
 
+.page1::before {
+    content: "";
+    position: absolute;
+    height: 65%;
+    width: 100%;
+    background-color: rgba(2, 2, 2, 0.63);
+}
 
-@media (max-width:426px) and (max-height:650px) and (min-height:600px) {
+.page1Content {
+    padding: 20px 0 0px 10px;
+    position: absolute;
+    width: 100vw;
+    height: 40vh;  
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.page1Button {
+    position: relative;
+    top: 50vh;
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    padding-left: 5vw;
+}
+
+.Button {     
+    border: 3px solid #4D8175;
+    border-radius: 3vw;
+    height: 7vh;
+    width: 15vh;
+    background-color: black;
+}
+
+@media ((min-width:322px) and (max-width:376px)) {
+    .Button {
+        height: 8vh;
+        width: 18vh;
+    }
+}
+
+@media ((min-width:378px) and (max-width:427px)) {
+    .Button {
+        height: 9vh;
+        width: 19vh;
+    }
+}
+
+/* Styling for .page3 */
+.page3 {
+    height: 80vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.swiper {
+    width: 95%;
+    height: 95%;
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    border-radius: 4px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Additional media query for higher screen height mobile */
+@media (max-width:426px) and (max-height:670px) and (min-height:600px) {
+    /* Adjusted styles for .page2 and .page1 */
     * {
         margin: 0;
         padding: 0;
@@ -157,172 +144,122 @@ header=>300
         overflow-x: hidden;
         scroll-behavior: smooth;
     }
-    /* **********************************styleing page2 bar****************************** */
-    .page2{
+    
+    /* Common styles for .page2 and .page1 */
+    .page2, .page1 {
+        width: 100vw;
+    }
+    
+    /* Styling for .page2 */
+    .page2 {
         display: flex;
         flex-direction: column;
         height: 40vh;
-        width: 100vw;
     }
-    .lower_tap{
-        gap:0.5vh;
+    
+    .lower_tap {
+        gap: 1vh;
     }
-   
-    .card{
-        height: 75%;
-        width:31vw;
-       
+    
+    .card {
+        height: 80%;
+        width: 30vw;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-        
-    /* **********************************styleing page1 bar****************************** */
-    .page1{
-        height: 60vh;
-        width:100vw;
+    
+    /* Styling for .page1 */
+    .page1 {
+        height: 65vh;
         background-image: url(mobile_bg.jpg);
         background-position: center;
         background-size: 53vh;
+        position: relative;
     }
-    .page1::before{
+    
+    .page1::before {
         content: "";
-        position:absolute;
-        height:60%;
-        width:100%;
+        position: absolute;
+        height: 65%;
+        width: 100%;
         background-color: rgba(2, 2, 2, 0.63);
     }
-    .page1Content{
+    
+    .page1Content {
         padding: 20px 0 0px 10px;
         position: absolute;
-        width:100vw;
+        width: 100vw;
         height: 40vh;  
         display: flex;
         flex-direction: column;
-        gap:22px
+        gap: 22px;
     }
-    .page1Button{
-        position:relative;
-        top:45vh;
-        height:12vh;
-        width:100%;
-        display:flex;
+    
+    .page1Button {
+        position: relative;
+        top: 50vh;
+        height: 12vh;
+        width: 100%;
+        display: flex;
         align-items: center;
-        gap:5vw;
+        gap: 5vw;
         padding-left: 5vw;
-       
-    
-
     }
-    .Button{     
-        border:3px solid #4D8175;
-        border-radius:3vw;
-        height:7vh;
-        width:15vh;
+    
+    .Button {     
+        border: 3px solid #4D8175;
+        border-radius: 3vw;
+        height: 7vh;
+        width: 15vh;
         background-color: black;
-        
-    }
-    @media ((min-width:322px) and (max-width:376px)) {
-    .Button{
-        height:8vh;
-        width:18vh;
-    }
-        
-    }
-
-    @media ((min-width:378px) and (max-width:427px)) {
-        .Button{
-        height:9vh;
-        width:19vh;
-        }
-        
     }
     
-
-    /* **********************************styleing page3 ****************************** */
-    .page3{
+    @media ((min-width:322px) and (max-width:376px)) {
+        .Button {
+            height: 8vh;
+            width: 18vh;
+        }
+    }
+    
+    @media ((min-width:378px) and (max-width:427px)) {
+        .Button {
+            height: 9vh;
+            width: 19vh;
+        }
+    }
+    
+    /* Styling for .page3 */
+    .page3 {
         height: 80vw;
-        width:100vw;
-       
+        width: 100vw;
         display: flex;
         flex-direction: row;
     }
+    
     .swiper {
         width: 95%;
         height: 95%;
         z-index: 100;
         position: absolute;
-        top:0px;
+        top: 0px;
         border-radius: 4px;
     }
-
+    
     .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
         display: flex;
-        
         justify-content: center;
         align-items: center;
     }
-
+    
     .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
     }
-        /* **********************************styleing page4 ****************************** */
-
-    .page4{
-        height: 40vh;
-        width:100%;
-        display: flex;
-        flex-direction: row;
-        
-    }
-
-
-
-
-   /* **********************************styleing page5 ****************************** */
-    .page5{
-        min-height: 40vh;
-        width: 100vw;
-        
-    }
-
-   /* **********************************styleing page6****************************** */
-
-    .page6{
-        height: 63vh;
-        width:100%;
-        display: flex;
-        flex-direction: column;
-     
-    }
-
-
-   /* **********************************Gernral page for all****************************** */
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 }
