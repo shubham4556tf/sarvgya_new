@@ -135,6 +135,101 @@ html, body {
 /* Additional media query for higher screen height mobile */
 @media (max-width:426px) and (max-height:700px) and (min-height:600px) {
     /* Adjusted styles for .page2 and .page1 */
+    .hamburger{
+    display: block;
+
+}
+.hamburger {
+    position: absolute;
+	display: block;
+	width: 45px;
+	cursor: pointer;
+	appearance: none;
+	background:none;
+	outline: none;
+	border: none; 
+    margin: 0 85vw;
+    display: block;
+    top:39vh;
+    left:2vh;
+    color:wheat;
+    z-index: 400;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+ 
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+	content: '';
+	display: block;
+	width: 1vw;
+	height: 1vw;
+	background-color:white;
+	margin: 1.2px 0;
+	transition: 0.4s;
+    z-index: 400;
+    border-radius:55vw;
+
+}
+
+
+
+.hamburger.is-active:before {
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+    
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+	opacity: 0;
+}
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	z-index: 98;
+	background-color: rgba(0, 0, 0, 0.885);
+	padding-top: 120px;
+	transition: 0.4s;
+    z-index: 400;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mobile-nav.is-active {
+	left: 0;
+}
+
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	width: 200px;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 12px 16px;
+    font-size: 1.2rem;
+	color: #FFF;
+	text-decoration: none;
+    font-family: sans-serif,"Nunito", sans-serif; 
+
+}
+.mobile-nav img{
+    position: relative;
+    top:1vh;
+    right:2vh;
+   
+    width: 7vw;
+}
+.mobile-nav a:hover {
+	background-color: #24104f;
+}
     * {
         margin: 0;
         padding: 0;
